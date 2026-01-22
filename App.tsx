@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import MasterControl from './components/MasterControl';
@@ -336,15 +337,18 @@ const App: React.FC = () => {
 
   if (!activeProject) {
     return (
-      <div className="min-h-screen bg-slate-50">
-        <ProjectList 
-          projects={projects} 
-          onSelectProject={setActiveProjectId} 
-          onCreateProject={handleCreateProject}
-          userRole={userRole}
-          onSwitchRole={setUserRole}
-        />
-      </div>
+      <>
+        <div className="min-h-screen bg-slate-50">
+          <ProjectList 
+            projects={projects} 
+            onSelectProject={setActiveProjectId} 
+            onCreateProject={handleCreateProject}
+            userRole={userRole}
+            onSwitchRole={setUserRole}
+          />
+        </div>
+        <Analytics />
+      </>
     );
   }
 
@@ -406,16 +410,19 @@ const App: React.FC = () => {
   };
 
   return (
-    <Layout 
-      activeTab={activeTab} 
-      setActiveTab={setActiveTab} 
-      onSwitchProject={() => setActiveProjectId(null)}
-      projectName={activeProject.name}
-      userRole={userRole}
-      onSwitchRole={setUserRole}
-    >
-      {renderContent()}
-    </Layout>
+    <>
+      <Layout 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        onSwitchProject={() => setActiveProjectId(null)}
+        projectName={activeProject.name}
+        userRole={userRole}
+        onSwitchRole={setUserRole}
+      >
+        {renderContent()}
+      </Layout>
+      <Analytics />
+    </>
   );
 };
 
