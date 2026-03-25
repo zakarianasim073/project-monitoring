@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Project Monitoring
 
-# Run and deploy your AI Studio app
+## Project Overview
+This project monitoring tool is designed to provide an intuitive interface for tracking various projects. It aims to streamline project management and enhance productivity.
 
-This contains everything you need to run your app locally.
+## Features
+- Track multiple projects simultaneously.
+- Visualize project timelines and deadlines.
+- Collaboration features for team members.
+- Automated reminders for upcoming deadlines.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1uVcQxvJAURr5-Q8-7CBVodxdQFkQuIWz
+## Installation
+To install the project monitoring tool, follow these steps:
+1. Clone the repository: `git clone https://github.com/zakarianasim073/project-monitoring.git`
+2. Navigate to the project directory: `cd project-monitoring`
+3. Install dependencies: `npm install`
 
-## Run Locally
+## Usage
+To start the project monitoring tool, run the following command:
+```
+npm start
+```
 
-**Prerequisites:**  Node.js
+## Architecture
+The tool is built using:
+- Frontend: React.js
+- Backend: Node.js
+- Database: MongoDB
 
+## Development Workflow
+1. Clone the repository.
+2. Create a new branch for your feature: `git checkout -b feature/new-feature`
+3. Make your changes and commit them: `git commit -m "Add new feature"`
+4. Push your branch: `git push origin feature/new-feature`
+5. Create a pull request for review.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Project Tracking
+Utilize the built-in tracking tools to manage project timelines and tasks. Ensure that all team members update their task statuses regularly.
+
+## Contribution Guidelines
+We welcome contributions! Please follow these guidelines:
+- Fork the repository.
+- Create a new branch for your changes.
+- Write clear commit messages.
+- Submit a pull request for review.
+
+## Other Relevant Sections
+For any issues or feature requests, please open an issue on GitHub. We appreciate your contributions and feedback!
